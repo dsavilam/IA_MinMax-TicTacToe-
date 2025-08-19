@@ -201,10 +201,11 @@ int main()
 
         char board [3][3];
         cout << "Ingresa tu tablero de triqui: " << endl;
-        cout << "Recuerda 'x' para movimiento jugador, 'o' para oponente y '_' para el vacio " << endl;
+        cout << "Recuerda 'x' para movimiento jugador, 'o' para oponente y '_' para el vacio (Caps sensitive jajdsaj)" << endl;
 
         for (int i = 0; i < 3; i++){
             for (int j = 0; j < 3; j++){
+                cout << "Ingresa el movimiento de la fila " << i << " y columna " << j << ": ";
                 cin >> board [i][j];
                 if (board[i][j] != 'x' && board[i][j] != 'o' && board[i][j] != '_') {
                     cerr << "Tienes que ingresar uno de los caracteres permitidos, voy a estallar ahora! " << endl;
@@ -212,6 +213,7 @@ int main()
                 }
             }
         }
+
 
         cout << "Tu tablero quedo de la siguiente manera: " << endl;
 
@@ -225,9 +227,7 @@ int main()
         Move bestMove = findBestMove(board);
 
         cout << "El mejor movimiento posible es: " << endl;
-        cout << "FILA: " << bestMove.fil << "COLUMNA: " <<  bestMove.col << endl;
-    
-
+        cout << "FILA: " << bestMove.fil << " COLUMNA: " <<  bestMove.col << endl;
     }
     
     if (opcion == '2'){
@@ -252,11 +252,10 @@ int main()
     Move bestMove = findBestMove(board);
 
     cout << "El mejor movimiento posible es: " << endl;
-    cout << "FILA: " << bestMove.fil << "COLUMNA: " <<  bestMove.col;
-    
+    cout << "FILA: " << bestMove.fil << " COLUMNA: " <<  bestMove.col << endl;
     }
 
-    else {
+    if (opcion != '1' && opcion != '2') {
         cout << "Ingresa una opción de verdad >:( " << endl;
     }
     
