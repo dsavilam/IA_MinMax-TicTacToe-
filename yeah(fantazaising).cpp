@@ -34,9 +34,9 @@ int evaluate(char evaluatedBoard[3][3])
     {
         if (evaluatedBoard[fil][0]==evaluatedBoard[fil][1] && evaluatedBoard[fil][1]==evaluatedBoard[fil][2])
         {
-            if (b[fil][0]==jugador)
+            if (evaluatedBoard[fil][0]==jugador)
                 return +7;
-            else if (b[fil][0]==oponente)
+            else if (evaluatedBoard[fil][0]==oponente)
                 return -7;
         }
     }
